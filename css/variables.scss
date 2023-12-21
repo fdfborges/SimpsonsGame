@@ -1,0 +1,33 @@
+$amarelo-primario: #FFFF00;
+$amarelo-primario_hover: #cfcf00;
+$preto: #000;
+$branco: #FFF;
+$acerola: #F3582C;
+
+@font-face{
+    font-family: 'Simpsons';
+    src: url('/Assets/Fonts/SimpsonfontDEMO.otf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Comic';
+    src: url('/Assets/Fonts/ComicNeueSansID.ttf') format('truetype');
+}
+
+@mixin button-start{
+        width: 15rem;
+        height: 2.5rem;
+
+        font-family: 'Simpsons', sans-serif;
+        font-size: 1rem;
+
+        border-radius: 7px;
+        border: $preto solid 3px;
+        background-color: $amarelo-primario;
+        transition: 0.2s;
+        box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.33);
+        &:hover{
+            transition: 0.2s;
+            background-color: $amarelo-primario_hover;
+        }
+    }

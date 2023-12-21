@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Quiz Simpsons</title>
+</head>
+
+<body>
+    <div class="container">       
+        <div class="titleandsubt">
+            <h1>Quiz Simpsons</h1>
+            <p>Voce sabe tudo sobre os Simpsons<b>?</b></p>
+        </div>
+        <div class="containerimages">
+            <div class="imageshomer">
+                <img id="imageHomer" class="imagehomer" src="./Assets/Homer.png" alt="">
+            </div>
+            <div class="imagesbart">
+                <img id="imageBart" class="imagebart" src="./Assets/Bart.png" alt="">
+            </div>
+        </div>
+        <button id="buttonStart" class="button-start">COMEÇAR</button>
+        <div id="popupAudio" class="popupaudio">
+            <h1>Deseja ouvir a trilha<br>sonora enquanto joga<b>?</b></h1>
+            <div class="buttonspopup">
+                <button id="popupAudioBtnYes">Sim</button>
+                <button id="popupAudioBtnNo">Nao</button>
+            </div>
+        </div>
+        <audio id="audioIntroSimpsons" src="/Assets/Audio/IntroSimpsons.mp4"  loop></audio>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

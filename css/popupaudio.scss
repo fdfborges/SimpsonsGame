@@ -1,0 +1,36 @@
+.popupaudio{
+    position: relative;
+    bottom: 40rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem;
+
+    border: solid 1px red;
+    width: 18rem;
+    height: 7rem;
+    background-color: $acerola;
+    border-radius: 7px;
+    box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.33);
+    h1{
+        font-family: 'Simpsons', sans-serif;
+        font-size: 1.1rem;
+        text-align: center;
+        color: $branco;
+        b{
+            font-family: 'Comic', sans-serif;
+        }
+    }
+    .buttonspopup{
+        display: flex;
+        gap: 1.5rem;
+        button{
+            @include button-start;
+            width: 5rem;
+            height: 2rem;
+        }
+    }
+}
