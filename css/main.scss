@@ -1,8 +1,20 @@
 @import 'variables';
 @import 'popupaudio';
 @import 'buttonsound';
+@import 'dificulty';
 
+@keyframes shake {
+    0% { transform: rotate(8deg); }
+    25% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg); }
+    75% { transform: rotate(-8deg); }
+    100% { transform: rotate(0deg); }
+  }
 
+  .popup-audio {
+    transition: 0.1s;
+    animation: shake 0.5s ease-in-out;
+  }
 
 *{
     margin: 0;
@@ -27,9 +39,8 @@ body{
     justify-content: center;
     align-items: center;
 
-
     .titleandsubt{
-        margin-top: 10rem;
+        padding-top: 1rem;
         display: flex;
         flex-direction: column;
         font-family: 'Simpsons', sans-serif;
@@ -49,9 +60,25 @@ body{
             }
         }
     }
-    .button-start{
-        @include button-start;
+
+    .btnStart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 2;
+        #buttonStartAudio{
+            position: absolute;
+            opacity: 10%;
+            z-index: 1;
+        }
+        .button-start{
+            @include button-start;
+        }
+        
     }
+   
+   
 
     .containerimages{
     width: 100px;

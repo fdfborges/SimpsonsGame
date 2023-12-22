@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <div class="container">       
-        <div class="titleandsubt">
+    <div class="container">
+        <div id="titleandsubt" class="titleandsubt">
             <h1>Quiz Simpsons</h1>
             <p>Voce sabe tudo sobre os Simpsons<b>?</b></p>
         </div>
@@ -22,7 +22,10 @@
                 <img id="imageBart" class="imagebart" src="./Assets/Bart.png" alt="">
             </div>
         </div>
-        <button id="buttonStart" class="button-start">COMEÇAR</button>
+        <div class="btnStart">
+            <button id="buttonStart" class="button-start" disabled>COMEÇAR</button>
+            <button id="buttonStartAudio" class="button-start">COMEÇAR</button>
+        </div>
         <div id="popupAudio" class="popupaudio">
             <h1>Deseja ouvir a trilha<br>sonora enquanto joga<b>?</b></h1>
             <div class="buttonspopup">
@@ -30,8 +33,34 @@
                 <button id="popupAudioBtnNo">Nao</button>
             </div>
         </div>
-        <audio id="audioIntroSimpsons" src="/Assets/Audio/IntroSimpsons.mp4"  loop></audio>
+        <audio id="audioIntroSimpsons" src="/Assets/Audio/IntroSimpsons.mp4" loop></audio>
+        <div class="dificulty">
+            <div id="titleDificulty" class="titleDificulty">
+                <p>Escolha o Nivel de<br>Dificuldade:</p>
+            </div>
+            <div class="dificultys-images">
+                <div id="dificulty-facil" class="dificulty-facil">
+                    <button id="dificulty-facil-button">
+                        <img id="dificulty-Facil-Img" src="./Assets/mag.png" alt="Dificuldade Fácil">
+                        <p>Facil</p>
+                    </button>
+                </div>
+                <div id="dificulty-medio" class="dificulty-medio">
+                    <button id="dificulty-medio-button">
+                        <img id="dificulty-medio-img" src="./Assets/homercorrendo.png" alt="Dificuldade Média">
+                        <p>Medio</p>
+                    </button>
+                </div>
+                <div id="dificulty-dificil" class="dificulty-dificil">
+                    <button id="dificulty-dificil-button">
+                        <img id="dificulty-dificil-img" src="./Assets/neddiabo.png" alt="Dificuldade Dificil">
+                        <p>Dificil</p>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
+
     <script src="./js/index.js"></script>
 </body>
 
