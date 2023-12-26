@@ -88,29 +88,16 @@ buttonStart.addEventListener("click", ()=>{
     dificultyMedia.style.bottom = "0rem";
     dificultyDificil.style.transition = "1s"
     dificultyDificil.style.bottom = "0rem";
-   
-    
 });
 
+const difficultyImages = document.querySelectorAll('.btn-difficulty');
 
-dificultyFacilButton.addEventListener('click', () => {
-    resetOpacity(); 
-    dificultyFacilImg.style.opacity = '100%'; 
-});
+difficultyImages.forEach((btn) => {
+    btn.addEventListener('click', function() {
+        difficultyImages.forEach((btn) => btn.style.opacity = ' 70%');
+        this.style.opacity = '100%';
+        document.querySelector('.dificulty-choice').innerHTML = this.dataset.dificulty
+    })
+})
 
-dificultyMedioButton.addEventListener('click', () => {
-    resetOpacity();
-    dificultyMedioImg.style.opacity = '100%';
-});
-
-dificultyDificilButton.addEventListener('click', () => {
-    resetOpacity();
-    dificultyDificilImg.style.opacity = '100%';
-});
-
-
-function resetOpacity() {
-    dificultyFacilImg.style.opacity = '70%';
-    dificultyMedioImg.style.opacity = '70%';
-    dificultyDificilImg.style.opacity = '70%';
-}
+//NECESSÁRIO ESTILIZAR A SELEÇÃO SMALL DE DIFICULDADE
