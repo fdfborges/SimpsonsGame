@@ -91,8 +91,11 @@ buttonStart.addEventListener("click", ()=>{
 });
 
 const difficultyImages = document.querySelectorAll('.btn-difficulty');
-const startButton = document.createElement('button');
 const containerDificulty = document.getElementById('dificulty');
+
+const startButton = document.createElement('a');
+let pointerDificulty = "";
+
 
 difficultyImages.forEach((btn) => {
     btn.addEventListener('click', function() {
@@ -100,11 +103,23 @@ difficultyImages.forEach((btn) => {
         this.style.opacity = '100%';
         document.querySelector('.dificulty-choice').innerHTML = this.dataset.dificulty
 
+        if(this.dataset.dificulty === "Facil"){
+            console.log("Facil")
+            pointerDificulty = "https://google.com"
+        }else if(this.dataset.dificulty === "Media"){
+            console.log("MEdia")
+            pointerDificulty = "https://instagram.com"
+        }else if(this.dataset.dificulty === "Dificil"){
+            console.log("Dificil")
+            pointerDificulty = "https://pt-br.facebook.com/"
+        }
+
         //ButtonStartGame
         startButton.classList.add('btnStartGame');
         startButton.textContent = 'COMECAR';
+        startButton.setAttribute('href', pointerDificulty);
         containerDificulty.appendChild(startButton);
-
+        
         //Rolagem
         window.scrollTo({
             top: document.body.scrollHeight,

@@ -33,3 +33,25 @@ $acerola: #F3582C;
     }
 
 
+@mixin link-a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    width: 15rem;
+    height: 2.5rem;
+
+    font-family: 'Simpsons', sans-serif;
+    font-size: 1rem;
+    color: $preto;
+    border-radius: 7px;
+    border: $preto solid 3px;
+    background-color: $amarelo-primario;
+    transition: 0.2s;
+    box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.33);
+    &:hover{
+        transition: 0.2s;
+        background-color: $amarelo-primario_hover;
+    }
+}

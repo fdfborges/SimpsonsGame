@@ -6,8 +6,7 @@
   .btnStartGame{
         position: relative;
         top: 5rem;
-        
-        @include button-start;
+        @include link-a
   }
 }
 
