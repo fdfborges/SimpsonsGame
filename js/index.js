@@ -91,12 +91,25 @@ buttonStart.addEventListener("click", ()=>{
 });
 
 const difficultyImages = document.querySelectorAll('.btn-difficulty');
+const startButton = document.createElement('button');
+const containerDificulty = document.getElementById('dificulty');
 
 difficultyImages.forEach((btn) => {
     btn.addEventListener('click', function() {
         difficultyImages.forEach((btn) => btn.style.opacity = ' 70%');
         this.style.opacity = '100%';
         document.querySelector('.dificulty-choice').innerHTML = this.dataset.dificulty
+
+        //ButtonStartGame
+        startButton.classList.add('btnStartGame');
+        startButton.textContent = 'COMECAR';
+        containerDificulty.appendChild(startButton);
+
+        //Rolagem
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        })
     })
 })
 

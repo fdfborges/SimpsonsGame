@@ -1,7 +1,14 @@
 .dificulty{
     display: flex;
     justify-content: center;
+    height: max-content;
     z-index: 1;
+  .btnStartGame{
+        position: relative;
+        top: 5rem;
+        
+        @include button-start;
+  }
 }
 
 .titleDificulty{
@@ -17,6 +24,7 @@
 
     width: 19rem;
     height: 6rem;
+    padding-bottom: 0.5rem;
     border-radius: 7px;
     background-color: $amarelo-primario;
     box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.33);
@@ -25,6 +33,22 @@
         font-size: 1.7rem;
         text-align: center;
     }
+   .container-dificulty-choice{
+        font-family: 'Simpsons', Arial;
+        font-size: 0.8rem;
+        text-align: center; 
+        background-color: transparent;
+        b{
+            font-family: 'Comic', sans-serif;
+        }
+    span{
+        font-family: 'Simpsons', Arial;
+        font-size: 0.8rem;
+        text-align: center; 
+        background-color: transparent;
+        color: $branco;
+    }
+   }
 }
 
 .dificultys-images{
