@@ -127,5 +127,3 @@ difficultyImages.forEach((btn) => {
         })
     })
 })
-
-//NECESSÁRIO ESTILIZAR A SELEÇÃO SMALL DE DIFICULDADE

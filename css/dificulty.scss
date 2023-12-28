@@ -56,47 +56,8 @@
     display: flex;
     gap: 10rem;
     overflow: hidden;
-    .dificulty-facil{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        bottom: -20rem;
-        button{
-            background-color: transparent;
-            border: none;
-            img{
-                height: 17rem;
-                opacity: 70%;
-            }
-            p{
-                font-family: 'Simpsons', Arial;
-                font-size: 1.5rem;
-            }
-        }
-    }
-    .dificulty-medio{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        bottom: -20rem;
-        button{
-            background-color: transparent;
-            border: none;
-            img{
-                height: 17rem;
-                opacity: 70%;
-                
-            }
-            p{
-                font-family: 'Simpsons', Arial;
-                font-size: 1.5rem;
-            }
-        }
-    }
+    .dificulty-facil,
+    .dificulty-medio,
     .dificulty-dificil{
         position: relative;
         display: flex;
@@ -107,6 +68,9 @@
         button{
             background-color: transparent;
             border: none;
+            &:focus{
+                outline: none;
+            }
             img{
                 height: 17rem;
                 opacity: 70%;
