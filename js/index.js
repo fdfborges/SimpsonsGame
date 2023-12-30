@@ -107,7 +107,7 @@ difficultyImages.forEach((btn) => {
             console.log("Facil")
             pointerDificulty = "https://google.com"
         }else if(this.dataset.dificulty === "Media"){
-            console.log("MEdia")
+            console.log("Media")
             pointerDificulty = "https://instagram.com"
         }else if(this.dataset.dificulty === "Dificil"){
             console.log("Dificil")

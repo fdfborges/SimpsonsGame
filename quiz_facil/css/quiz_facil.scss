@@ -1,0 +1,79 @@
+@import '../../css/variables';
+
+body{
+    @include background;
+    display: block;
+    background-image:url("../../Assets/Background_Sky.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    border: solid 2px $preto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 60rem;
+    height: 35rem;
+    background-color: $verde;
+    border-radius: 7px;
+    header{
+        display: flex;
+        align-items: center;
+        .titulo{
+            font-size: 1.5rem;
+            font-family: 'Comic', sans-serif;
+        }
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        li{
+            @include button-start;
+            width: 50rem;
+            height: 3rem;
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+
+            font-family: 'Comic', sans-serif;
+            font-size: 1rem;
+        }
+        img{
+            position: relative;
+            height: 10rem;
+        }
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        .FinalInfo{
+            font-family: 'Comic', sans-serif;
+            font-size: 1rem;
+    }
+    }
+}
+
+/* Estilos para o resultado final */
+.resultado-final {
+    font-family: 'Comic', sans-serif;
+    font-size: 1rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: $amarelo-primario;
+}
+
+.retornar{
+    @include button-start;
+}

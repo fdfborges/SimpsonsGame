@@ -21,16 +21,7 @@
 }
 
 body{
-    height: 720px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-image: url('../Assets/Background_Sky.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    @include background;
 }
 
 .container{
