@@ -105,7 +105,7 @@ difficultyImages.forEach((btn) => {
 
         if(this.dataset.dificulty === "Facil"){
             console.log("Facil")
-            pointerDificulty = "https://google.com"
+            pointerDificulty = "https://simpsons-game-lemon.vercel.app/quiz_facil/quiz_facil.html"
         }else if(this.dataset.dificulty === "Media"){
             console.log("Media")
             pointerDificulty = "https://instagram.com"
