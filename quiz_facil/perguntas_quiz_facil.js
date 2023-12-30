@@ -22,6 +22,8 @@ let perguntas = [
     }
 ];
 
+let container = document.querySelector('.container')
+
 let app = {
     start: function () {
         this.Atualpos = 0;
@@ -37,23 +39,23 @@ let app = {
     },
     hideQuestion: function(q) {
         this.qatual = q;
-
         let titleDiv = document.getElementById('titulo');
         titleDiv.textContent = q.titulo;
-
+    
         let alts = document.querySelectorAll('.alternativa');
         alts.forEach(function(element, index) {
             element.textContent = q.alternativas[index];
         });
-        let container = document.getElementById("container");
+    
         let img = document.getElementById("img");
         if (q.img) {
             img.src = q.img;
             img.style.display = "block"; // Exibe a imagem
+            q.img = '';
         } else {
+            img.style.display = "none"; // Oculta a imagem se não houver uma associada à pergunta
             container.style.gap = "1.5rem"
             container.style.height = "30rem"
-            img.style.display = "none"; // Oculta a imagem se não houver uma associada à pergunta
         }
     },
 
@@ -98,33 +100,29 @@ let app = {
         resultDiv.textContent = result;
     },
 
-
-    mostrarResultadoFinal: function () {
-        let container = document.getElementById('container');
-    
-        // Remove todos os elementos filhos do container
-        while (container.firstChild) {
-            container.removeChild(container.firstChild);
-        }
-    
-        // Adiciona o resultado final com uma classe para estilização
-        let resultadoFinalDiv = document.createElement('div');
-        resultadoFinalDiv.textContent = `Seu resultado final é: ${this.Totalpontos}/4`;
-        resultadoFinalDiv.classList.add('resultado-final');
-        container.appendChild(resultadoFinalDiv);
-    
-        // Cria e adiciona um botão de voltar
-        let button = document.createElement('button');
-        button.textContent = 'Voltar';
-        button.classList.add('retornar');
-        button.addEventListener('click', function(){
-            window.location.href = 'https://simpsons-game-lemon.vercel.app/';
-        })
-        container.appendChild(button);
+mostrarResultadoFinal: function () {
+    // Remove os elementos específicos do quiz (texto, perguntas, etc.)
+    let container = document.querySelector('.container');
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
     }
-}    
+
+    // Exibe o resultado final no container
+    let resultadoFinalDiv = document.createElement('div');
+    resultadoFinalDiv.textContent = `Seu resultado final é: ${this.Totalpontos}/4`;
+    resultadoFinalDiv.classList.add('resultado-final-text');
+    container.appendChild(resultadoFinalDiv);
+
+    // Adiciona um botão no final
+    let button = document.createElement('button');
+    button.textContent = 'Voltar';
+    button.classList.add('retornar');
+    button.addEventListener('click', function(){
+        window.location.href = "https://simpsons-game-lemon.vercel.app/";
+    })
+    container.appendChild(button);
+}
+
+}
 
 app.start();
-
-let button = document.createElement('button');
-button.textContent = 'Reiniciar Quiz'; // Texto do botão

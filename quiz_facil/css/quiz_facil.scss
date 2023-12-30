@@ -59,14 +59,16 @@ body{
         flex-direction: column;
         gap: 0.5rem;
         .FinalInfo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-family: 'Comic', sans-serif;
             font-size: 1rem;
     }
     }
 }
 
-/* Estilos para o resultado final */
-.resultado-final {
+.resultado-final-text {
     font-family: 'Comic', sans-serif;
     font-size: 1rem;
     padding: 20px;
@@ -76,4 +78,15 @@ body{
 
 .retornar{
     @include button-start;
+}
+
+#result {
+    font-family: 'Comic', sans-serif;
+    font-size: 1rem;
+
+}
+
+#pontos {
+    font-family: 'Comic', sans-serif;
+    font-size: 1rem;
 }
