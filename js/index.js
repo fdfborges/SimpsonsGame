@@ -104,13 +104,10 @@ difficultyImages.forEach((btn) => {
         document.querySelector('.dificulty-choice').innerHTML = this.dataset.dificulty
 
         if(this.dataset.dificulty === "Facil"){
-            console.log("Facil")
             pointerDificulty = "https://simpsons-game-lemon.vercel.app/quiz_facil/quiz_facil.html"
         }else if(this.dataset.dificulty === "Media"){
-            console.log("Media")
             pointerDificulty = "https://instagram.com"
         }else if(this.dataset.dificulty === "Dificil"){
-            console.log("Dificil")
             pointerDificulty = "https://pt-br.facebook.com/"
         }
 

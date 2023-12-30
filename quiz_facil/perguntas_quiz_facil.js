@@ -117,7 +117,9 @@ let app = {
         let button = document.createElement('button');
         button.textContent = 'Voltar';
         button.classList.add('retornar');
-        button.src = "";
+        button.addEventListener('click', function(){
+            window.location.href = 'https://simpsons-game-lemon.vercel.app/';
+        })
         container.appendChild(button);
     }
 }    
